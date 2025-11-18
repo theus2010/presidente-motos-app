@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Presidente Motos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #111827;
+      color: #fff;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    header nav a {
+      color: #fff;
+      margin-left: 16px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .banner {
+      background: linear-gradient(135deg, #dc2626, #f97316);
+      color: #fff;
+      padding: 24px 16px;
+      text-align: center;
+    }
+
+    .banner h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+
+    .banner p {
+      margin: 0 0 16px;
+      font-size: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: #16a34a;
+      color: #fff;
+    }
+
+    .btn-outline {
+      border: 1px solid #fff;
+      color: #fff;
+    }
+
+    main {
+      padding: 16px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 32px;
+      background: #fff;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    section h2 {
+      margin-top: 0;
+      font-size: 18px;
+      margin-bottom: 12px;
+      border-left: 4px solid #dc2626;
+      padding-left: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      background: #d1d5db;
+    }
+
+    .card h3 {
+      margin: 0 0 4px;
+      font-size: 16px;
+    }
+
+    .card p {
+      margin: 2px 0;
+      font-size: 13px;
+      color: #4b5563;
+    }
+
+    .card-price {
+      margin-top: 6px;
+      font-weight: bold;
+      color: #dc2626;
+      font-size: 15px;
+    }
+
+    .card-footer {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 999px;
+      font-size: 11px;
+      background: #f3f4f6;
+      color: #374151;
+      margin-right: 4px;
+    }
+
+    form label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 4px;
+      margin-top: 8px;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #d1d5db;
+      font-size: 14px;
+    }
+
+    form textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      padding: 16px;
+      color: #6b7280;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      background: #22c55e;
+      color: #fff;
+      border-radius: 999px;
+      padding: 10px 14px;
+      text-decoration: none;
+      font-size: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 16px;
+      }
+      .banner h2 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Presidente Motos</h1>
+  <nav>
+    <a href="#motos">Motos</a>
+    <a href="#capacetes">Capacetes</a>
+    <a href="#pecas">Peças</a>
+    <a href="#oficina">Oficina</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<div class="banner">
+  <h2>Presidente Motos</h2>
+  <p>Venda de motos, capacetes, peças e oficina especializada.</p>
+  <a class="btn btn-primary" href="#capacetes">Ver capacetes</a>
+  <a class="btn btn-outline" href="https://wa.me/5516994016202" target="_blank">Falar no WhatsApp</a>
+</div>
+
+<main>
+  <!-- Sessão Motos -->
+  <section id="motos">
+    <h2>Motos em destaque</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="" alt="Moto Exemplo">
+        <h3>Honda CG 160 Fan</h3>
+        <p>Ano 2022 • 20.000 km</p>
+        <p>Documentação em dia</p>
+        <div class="card-price">R$ 13.900,00</div>
+        <div class="card-footer">
+          <a class="btn btn-primary" href="https://wa.me/5516994016202?text=Tenho%20interesse%20na%20Honda%20CG%20160%20Fan" target="_blank">Tenho interesse</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="" alt="Moto Exemplo">
+        <h3>Yamaha Fazer 250</h3>
+        <p>Ano 2021 • 15.000 km</p>
+        <p>Único dono</p>
+        <div class="card-price">R$ 21.500,00</div>
+        <div class="card-footer">
+          <a class="btn btn-primary" href="https://wa.me/5516994016202?text=Tenho%20interesse%20na%20Yamaha%20Fazer%20250" target="_blank">Tenho interesse</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sessão Capacetes -->
+  <section id="capacetes">
+    <h2>Capacetes em destaque</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="" alt="Capacete Integral Preto">
+        <h3>Capacete Integral Preto</h3>
+        <p>Marca: LS2</p>
+        <p>Tamanhos: 56, 58, 60</p>
+        <div>
+          <span class="badge">Integral</span>
+          <span class="badge">Preto</span>
+        </div>
+        <div class="card-price">R$ 499,90</div>
+        <div class="card-footer">
+          <a class="btn btn-primary" href="https://wa.me/5516994016202?text=Tenho%20interesse%20no%20Capacete%20Integral%20Preto%20LS2" target="_blank">
+            Quero esse capacete
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="" alt="Capacete Aberto Vermelho">
+        <h3>Capacete Aberto Vermelho</h3>
+        <p>Marca: Pro Tork</p>
+        <p>Tamanhos: 58, 60</p>
+        <div>
+          <span class="badge">Aberto</span>
+          <span class="badge">Vermelho</span>
+        </div>
+        <div class="card-price">R$ 299,90</div>
+        <div class="card-footer">
+          <a class="btn btn-primary" href="https://wa.me/5516994016202?text=Tenho%20interesse%20no%20Capacete%20Aberto%20Vermelho%20Pro%20Tork" target="_blank">
+            Quero esse capacete
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="" alt="Capacete Cross">
+        <h3>Capacete Cross</h3>
+        <p>Marca: (Exemplo)</p>
+        <p>Tamanhos: 56, 58</p>
+        <div>
+          <span class="badge">Cross</span>
+        </div>
+        <div class="card-price">R$ 399,90</div>
+        <div class="card-footer">
+          <a class="btn btn-primary" href="https://wa.me/5516994016202?text=Tenho%20interesse%20no%20Capacete%20Cross" target="_blank">
+            Quero esse capacete
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sessão Peças -->
+  <section id="pecas">
+    <h2>Peças e acessórios</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Pneu traseiro 140/70</h3>
+        <p>Várias marcas</p>
+        <div class="card-price">R$ 350,00 (a partir)</div>
+        <div class="card-footer">
+          <a class="btn btn-primary" href="https://wa.me/5516994016202?text=Tenho%20interesse%20em%20pneu%20140/70" target="_blank">
+            Pedir orçamento
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Troca de óleo completa</h3>
+        <p>Óleo + filtro (consultar modelos)</p>
+        <div class="card-price">R$ 79,90 (a partir)</div>
+        <div class="card-footer">
+          <a class="btn btn-primary" href="https://wa.me/5516994016202?text=Quero%20informações%20sobre%20troca%20de%20%C3%B3leo" target="_blank">
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sessão Oficina / Agendamento -->
+  <section id="oficina">
+    <h2>Oficina • Agende seu serviço</h2>
+    <p>Preencha os dados e clique em enviar. O WhatsApp será aberto com as informações do seu agendamento.</p>
+
+    <form id="formOficina">
+      <label for="nome">Nome</label>
+      <input id="nome" name="nome" required>
+
+      <label for="telefone">Telefone</label>
+      <input id="telefone" name="telefone" placeholder="(16) 9...." required>
+
+      <label for="modelo">Modelo da moto</label>
+      <input id="modelo" name="modelo" placeholder="Ex: CG 160 Fan 2022" required>
+
+      <label for="placa">Placa</label>
+      <input id="placa" name="placa" placeholder="ABC-1234">
+
+      <label for="servico">Serviço desejado</label>
+      <select id="servico" name="servico">
+        <option>Revisão geral</option>
+        <option>Troca de óleo</option>
+        <option>Freios</option>
+        <option>Elétrica</option>
+        <option>Outro</option>
+      </select>
+
+      <label for="data">Data preferida</label>
+      <input id="data" name="data" type="date">
+
+      <label for="obs">Observações</label>
+      <textarea id="obs" name="obs" placeholder="Descreva barulho, problema, etc."></textarea>
+
+      <br><br>
+      <button type="submit" class="btn btn-primary">Enviar pelo WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato">
+    <h2>Contato</h2>
+    <p><strong>Presidente Motos</strong></p>
+    <p>WhatsApp: <a href="https://wa.me/5516994016202" target="_blank">(+55) 16 99401-6202</a></p>
+    <p>Atendimento: Seg a Sáb (horário a definir)</p>
+    <p>Endereço: (colocar endereço aqui)</p>
+  </section>
+</main>
+
+<a class="whatsapp-float" href="https://wa.me/5516994016202?text=Ol%C3%A1%2C%20vim%20pelo%20app%20da%20Presidente%20Motos" target="_blank">
+  WhatsApp Presidente Motos
+</a>
+
+<script>
+  // Envia dados do formulário da oficina para o WhatsApp
+  const form = document.getElementById('formOficina');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const telefone = document.getElementById('telefone').value;
+    const modelo = document.getElementById('modelo').value;
+    const placa = document.getElementById('placa').value;
+    const servico = document.getElementById('servico').value;
+    const data = document.getElementById('data').value;
+    const obs = document.getElementById('obs').value;
+
+    let texto = `Olá, meu nome é ${nome}.\n` +
+                `Telefone: ${telefone}\n` +
+                `Moto: ${modelo}\n` +
+                `Placa: ${placa}\n` +
+                `Serviço desejado: ${servico}\n` +
+                `Data preferida: ${data}\n` +
+                `Observações: ${obs}`;
+
+    const url = `https://wa.me/5516994016202?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
+  });
+</script>
+
+<footer>
+  © ${new Date().getFullYear ? new Date().getFullYear() : "2025"} Presidente Motos – Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
